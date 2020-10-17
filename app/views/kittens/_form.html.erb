@@ -1,0 +1,8 @@
+<%= simple_form_for @kitten do |f|%>
+  <%= f.error_notification %>
+  <%= f.input :name %>
+  <%= f.input :age %>
+  <%= f.input :cuteness %>
+  <%= f.input :softness %>
+  <%= f.button :submit %>
+<% end %>
