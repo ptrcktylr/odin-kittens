@@ -3,11 +3,22 @@ class KittensController < ApplicationController
 
   def index
     @kittens = Kitten.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @kittens }
+      format.xml { render xml: @kittens }
+    end
   end
 
   # GET /kittens/1
   # GET /kittens/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @kitten }
+      format.xml { render xml: @kitten }
+    end
   end
 
   # GET /kittens/new
